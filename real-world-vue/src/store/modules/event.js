@@ -52,7 +52,7 @@ export const actions = {
   },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
     console.log('Page:', page, 'perPage:', perPage)
-    EventService.getEvents(perPage, page)
+    return EventService.getEvents(perPage, page)
       .then(response => {
         console.log(response.data)
         commit('SET_EVENTS_TOTAL', ++response.headers['x-total-count'])
