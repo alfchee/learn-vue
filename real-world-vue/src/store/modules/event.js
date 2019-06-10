@@ -51,7 +51,7 @@ export const actions = {
         throw err
       })
   },
-  fetchEvents({ commit, dispatch }, { page }) {
+  fetchEvents({ commit, dispatch, state }, { page }) {
     return EventService.getEvents(state.perPage, page)
       .then(response => {
         console.log(response.data)
