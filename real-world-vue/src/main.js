@@ -2,9 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/store'
+import Vuelidate from 'vuelidate'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
+
+Vue.use(Vuelidate)
 
 // Automatic global register of components
 const requireComponent = require.context(
