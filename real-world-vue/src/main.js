@@ -6,6 +6,10 @@ import Vuelidate from 'vuelidate'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
+import DateFilter from './filters/date'
+
+// adding a global filter
+Vue.filter('date', DateFilter)
 
 Vue.use(Vuelidate)
 
